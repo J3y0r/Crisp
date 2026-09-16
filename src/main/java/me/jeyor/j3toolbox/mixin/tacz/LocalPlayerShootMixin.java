@@ -3,7 +3,6 @@ package me.jeyor.j3toolbox.mixin.tacz;
 import com.tacz.guns.api.entity.IGunOperator;
 import com.tacz.guns.api.item.IGun;
 import com.tacz.guns.client.gameplay.LocalPlayerShoot;
-import com.tacz.guns.resource.pojo.data.gun.Bolt;
 import com.tacz.guns.resource.pojo.data.gun.GunData;
 import me.jeyor.j3toolbox.ClientConfig;
 import net.minecraft.world.item.ItemStack;
@@ -31,17 +30,5 @@ public abstract class LocalPlayerShootMixin {
             return false;
         }
         return operator.getSynIsBolting();
-    }
-
-    @Redirect(
-            method = "preCheck",
-            at = @At(value = "INVOKE", target = "Lcom/tacz/guns/resource/pojo/data/gun/GunData;getBolt()Lcom/tacz/guns/resource/pojo/data/gun/Bolt;")
-    )
-    private Bolt j3toolbox$skipManualBolt(GunData gunData) {
-        Bolt bolt = gunData.getBolt();
-        if (ClientConfig.TACZ_REMOVE_SHOOT_DELAY.get() && bolt == Bolt.MANUAL_ACTION) {
-            return Bolt.CLOSED_BOLT;
-        }
-        return bolt;
     }
 }

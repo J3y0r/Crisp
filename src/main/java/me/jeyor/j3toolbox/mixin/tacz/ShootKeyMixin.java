@@ -1,11 +1,13 @@
 package me.jeyor.j3toolbox.mixin.tacz;
 
+import com.tacz.guns.api.TimelessAPI;
 import com.tacz.guns.api.client.gameplay.IClientPlayerGunOperator;
 import com.tacz.guns.api.entity.IGunOperator;
 import com.tacz.guns.api.item.IGun;
 import com.tacz.guns.api.item.gun.AbstractGunItem;
 import com.tacz.guns.api.item.gun.FireMode;
 import com.tacz.guns.client.input.ShootKey;
+import com.tacz.guns.resource.pojo.data.gun.Bolt;
 import me.jeyor.j3toolbox.ClientConfig;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.player.LocalPlayer;
@@ -58,7 +60,11 @@ public abstract class ShootKeyMixin {
         if (operator.needCheckAmmo() && !gunItem.canReload(player, mainHandItem)) {
             return;
         }
-        if (gunItem.getCurrentAmmoCount(mainHandItem) > 0 || gunItem.hasBulletInBarrel(mainHandItem)) {
+        boolean openBolt = TimelessAPI.getCommonGunIndex(gunItem.getGunId(mainHandItem))
+                .map(index -> index.getGunData().getBolt() == Bolt.OPEN_BOLT)
+                .orElse(false);
+        boolean chambered = gunItem.hasBulletInBarrel(mainHandItem) && !openBolt;
+        if (gunItem.getCurrentAmmoCount(mainHandItem) > 0 || chambered) {
             return;
         }
         IClientPlayerGunOperator.fromLocalPlayer(player).reload();
