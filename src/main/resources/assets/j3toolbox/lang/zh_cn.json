@@ -1,0 +1,9 @@
+{
+  "j3toolbox.config.title": "J3ToolBox",
+  "j3toolbox.config.removeBreakDelay": "移除破坏延迟",
+  "j3toolbox.config.removeJumpDelay": "移除跳跃延迟",
+  "j3toolbox.config.tacz.removeRecoil": "取消 TACZ 后坐力",
+  "j3toolbox.config.tacz.autoReload": "TACZ 空仓自动换弹",
+  "j3toolbox.config.tacz.removeShootDelay": "取消 TACZ 射击间隔/拉栓",
+  "j3toolbox.config.tacz.semiAsAuto": "TACZ 半自动改全自动"
+}

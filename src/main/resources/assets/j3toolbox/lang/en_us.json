@@ -1,0 +1,9 @@
+{
+  "j3toolbox.config.title": "J3ToolBox",
+  "j3toolbox.config.removeBreakDelay": "Remove break delay",
+  "j3toolbox.config.removeJumpDelay": "Remove jump delay",
+  "j3toolbox.config.tacz.removeRecoil": "Remove TACZ recoil",
+  "j3toolbox.config.tacz.autoReload": "TACZ auto reload",
+  "j3toolbox.config.tacz.removeShootDelay": "Remove TACZ shoot delay",
+  "j3toolbox.config.tacz.semiAsAuto": "TACZ semi as full-auto"
+}

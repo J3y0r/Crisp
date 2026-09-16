@@ -1,0 +1,21 @@
+{
+  "required": false,
+  "minVersion": "0.8",
+  "package": "me.jeyor.j3toolbox.mixin.tacz",
+  "compatibilityLevel": "JAVA_8",
+  "refmap": "j3toolbox.refmap.json",
+  "plugin": "me.jeyor.j3toolbox.mixin.TaczMixinPlugin",
+  "mixins": [
+  ],
+  "client": [
+    "CameraSetupEventMixin",
+    "LocalPlayerShootMixin",
+    "ShootKeyMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "overwrites": {
+    "requireAnnotations": true
+  }
+}
