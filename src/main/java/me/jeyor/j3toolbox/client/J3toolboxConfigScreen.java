@@ -27,9 +27,13 @@ public class J3toolboxConfigScreen extends Screen {
         if (ModList.get().isLoaded("tacz")) {
             y = addOption(x, y, width, "j3toolbox.config.tacz.removeRecoil", ClientConfig.TACZ_REMOVE_RECOIL);
             y = addOption(x, y, width, "j3toolbox.config.tacz.autoReload", ClientConfig.TACZ_AUTO_RELOAD);
-            y = addOption(x, y, width, "j3toolbox.config.tacz.removeShootDelay", ClientConfig.TACZ_REMOVE_SHOOT_DELAY);
             y = addOption(x, y, width, "j3toolbox.config.tacz.semiAsAuto", ClientConfig.TACZ_SEMI_AS_AUTO);
         }
+        this.addRenderableWidget(Button.builder(Component.translatable("j3toolbox.config.autoaim.title"),
+                        button -> this.minecraft.setScreen(new AutoAimConfigScreen(this)))
+                .bounds(x, y, width, 20)
+                .build());
+        y += 24;
         this.addRenderableWidget(Button.builder(Component.translatable("gui.done"), button -> this.onClose())
                 .bounds(x, y + 12, width, 20)
                 .build());

@@ -4,6 +4,18 @@
   "j3toolbox.config.removeJumpDelay": "移除跳跃延迟",
   "j3toolbox.config.tacz.removeRecoil": "取消 TACZ 后坐力",
   "j3toolbox.config.tacz.autoReload": "TACZ 空仓自动换弹",
-  "j3toolbox.config.tacz.removeShootDelay": "取消 TACZ 射击间隔/拉栓",
-  "j3toolbox.config.tacz.semiAsAuto": "TACZ 半自动改全自动"
+  "j3toolbox.config.tacz.semiAsAuto": "TACZ 半自动改全自动",
+  "key.j3toolbox.autoaim": "自瞄",
+  "key.categories.j3toolbox": "J3ToolBox",
+  "j3toolbox.config.autoaim.title": "自瞄",
+  "j3toolbox.config.autoaim.enabled": "启用自瞄",
+  "j3toolbox.config.autoaim.triggerMode": "触发方式",
+  "j3toolbox.config.autoaim.triggerMode.HOLD": "按住",
+  "j3toolbox.config.autoaim.triggerMode.TOGGLE": "切换",
+  "j3toolbox.config.autoaim.searchRadius": "搜索半径",
+  "j3toolbox.config.autoaim.obstacleCheck": "遮挡检测",
+  "j3toolbox.config.autoaim.listMode": "过滤模式",
+  "j3toolbox.config.autoaim.listMode.BLACKLIST": "黑名单",
+  "j3toolbox.config.autoaim.listMode.WHITELIST": "白名单",
+  "j3toolbox.config.autoaim.showHighlight": "目标高亮"
 }

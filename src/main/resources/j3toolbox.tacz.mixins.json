@@ -9,7 +9,6 @@
   ],
   "client": [
     "CameraSetupEventMixin",
-    "LocalPlayerShootMixin",
     "ShootKeyMixin"
   ],
   "injectors": {
