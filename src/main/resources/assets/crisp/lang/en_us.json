@@ -1,0 +1,21 @@
+{
+  "crisp.config.title": "Crisp",
+  "crisp.config.removeBreakDelay": "Remove break delay",
+  "crisp.config.removeJumpDelay": "Remove jump delay",
+  "crisp.config.tacz.removeRecoil": "Remove TACZ recoil",
+  "crisp.config.tacz.autoReload": "TACZ auto reload",
+  "crisp.config.tacz.semiAsAuto": "TACZ semi as full-auto",
+  "key.crisp.autoaim": "Auto Aim",
+  "key.categories.crisp": "Crisp",
+  "crisp.config.autoaim.title": "Auto Aim",
+  "crisp.config.autoaim.enabled": "Enable Auto Aim",
+  "crisp.config.autoaim.triggerMode": "Trigger Mode",
+  "crisp.config.autoaim.triggerMode.HOLD": "Hold",
+  "crisp.config.autoaim.triggerMode.TOGGLE": "Toggle",
+  "crisp.config.autoaim.searchRadius": "Search Radius",
+  "crisp.config.autoaim.obstacleCheck": "Check Obstacles",
+  "crisp.config.autoaim.listMode": "Filter Mode",
+  "crisp.config.autoaim.listMode.BLACKLIST": "Blacklist",
+  "crisp.config.autoaim.listMode.WHITELIST": "Whitelist",
+  "crisp.config.autoaim.showHighlight": "Show Highlight"
+}

@@ -1,10 +1,10 @@
 {
   "required": false,
   "minVersion": "0.8",
-  "package": "me.jeyor.j3toolbox.mixin.tacz",
+  "package": "me.jeyor.crisp.mixin.tacz",
   "compatibilityLevel": "JAVA_8",
-  "refmap": "j3toolbox.refmap.json",
-  "plugin": "me.jeyor.j3toolbox.mixin.TaczMixinPlugin",
+  "refmap": "crisp.refmap.json",
+  "plugin": "me.jeyor.crisp.mixin.TaczMixinPlugin",
   "mixins": [
   ],
   "client": [

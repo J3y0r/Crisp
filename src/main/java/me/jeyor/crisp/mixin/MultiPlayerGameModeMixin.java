@@ -1,6 +1,6 @@
-package me.jeyor.j3toolbox.mixin;
+package me.jeyor.crisp.mixin;
 
-import me.jeyor.j3toolbox.ClientConfig;
+import me.jeyor.crisp.ClientConfig;
 import net.minecraft.client.multiplayer.MultiPlayerGameMode;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -16,7 +16,7 @@ public abstract class MultiPlayerGameModeMixin {
     private int destroyDelay;
 
     @Inject(method = "continueDestroyBlock", at = @At("HEAD"))
-    private void j3toolbox$removeBreakDelay(BlockPos pos, Direction face, CallbackInfoReturnable<Boolean> cir) {
+    private void crisp$removeBreakDelay(BlockPos pos, Direction face, CallbackInfoReturnable<Boolean> cir) {
         if (ClientConfig.REMOVE_BREAK_DELAY.get()) {
             this.destroyDelay = 0;
         }

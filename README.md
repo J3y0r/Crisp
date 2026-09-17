@@ -1,4 +1,4 @@
-# J3ToolBox
+# Crisp
 
 [![Minecraft](https://img.shields.io/badge/Minecraft-1.20.1-62b47a?style=flat-square)](https://www.minecraft.net/)
 [![Forge](https://img.shields.io/badge/Forge-47.4.23-c7543a?style=flat-square)](https://files.minecraftforge.net/)
@@ -25,18 +25,18 @@
 
 1. Minecraft **1.20.1** + Forge **47.4.23+**
 2. 把 jar 放进 `.minecraft/mods`
-3. 启动后在模组列表打开 J3ToolBox 配置页
+3. 启动后在模组列表打开 Crisp 配置页
 
 纯客户端模组，服务器不用装。
 
 ## 配置
 
-游戏内：`模组` → `J3ToolBox` → 配置。
+游戏内：`模组` → `Crisp` → 配置。
 
 也可以改客户端配置文件：
 
 ```
-.minecraft/config/j3toolbox-client.toml
+.minecraft/config/crisp-client.toml
 ```
 
 | 分组        | 键                  | 默认     | 作用               |

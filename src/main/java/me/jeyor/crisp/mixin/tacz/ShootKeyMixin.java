@@ -1,4 +1,4 @@
-package me.jeyor.j3toolbox.mixin.tacz;
+package me.jeyor.crisp.mixin.tacz;
 
 import com.tacz.guns.api.TimelessAPI;
 import com.tacz.guns.api.client.gameplay.IClientPlayerGunOperator;
@@ -8,7 +8,7 @@ import com.tacz.guns.api.item.gun.AbstractGunItem;
 import com.tacz.guns.api.item.gun.FireMode;
 import com.tacz.guns.client.input.ShootKey;
 import com.tacz.guns.resource.pojo.data.gun.Bolt;
-import me.jeyor.j3toolbox.ClientConfig;
+import me.jeyor.crisp.ClientConfig;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.player.LocalPlayer;
 import net.minecraft.world.item.ItemStack;
@@ -28,7 +28,7 @@ public abstract class ShootKeyMixin {
                     target = "Lcom/tacz/guns/api/item/IGun;getFireMode(Lnet/minecraft/world/item/ItemStack;)Lcom/tacz/guns/api/item/gun/FireMode;"
             )
     )
-    private static FireMode j3toolbox$semiAsAuto(IGun gun, ItemStack stack) {
+    private static FireMode crisp$semiAsAuto(IGun gun, ItemStack stack) {
         FireMode fireMode = gun.getFireMode(stack);
         if (ClientConfig.TACZ_SEMI_AS_AUTO.get() && fireMode == FireMode.SEMI) {
             return FireMode.AUTO;
@@ -37,7 +37,7 @@ public abstract class ShootKeyMixin {
     }
 
     @Inject(method = "autoShoot", at = @At("TAIL"))
-    private static void j3toolbox$autoReload(TickEvent.ClientTickEvent event, CallbackInfo ci) {
+    private static void crisp$autoReload(TickEvent.ClientTickEvent event, CallbackInfo ci) {
         if (!ClientConfig.TACZ_AUTO_RELOAD.get() || event.phase != TickEvent.Phase.END) {
             return;
         }

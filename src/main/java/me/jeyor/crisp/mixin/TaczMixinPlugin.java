@@ -1,4 +1,4 @@
-package me.jeyor.j3toolbox.mixin;
+package me.jeyor.crisp.mixin;
 
 import net.minecraftforge.fml.loading.FMLLoader;
 import org.objectweb.asm.tree.ClassNode;

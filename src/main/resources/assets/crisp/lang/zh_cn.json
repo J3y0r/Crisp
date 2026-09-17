@@ -1,0 +1,21 @@
+{
+  "crisp.config.title": "Crisp",
+  "crisp.config.removeBreakDelay": "移除破坏延迟",
+  "crisp.config.removeJumpDelay": "移除跳跃延迟",
+  "crisp.config.tacz.removeRecoil": "取消 TACZ 后坐力",
+  "crisp.config.tacz.autoReload": "TACZ 空仓自动换弹",
+  "crisp.config.tacz.semiAsAuto": "TACZ 半自动改全自动",
+  "key.crisp.autoaim": "自瞄",
+  "key.categories.crisp": "Crisp",
+  "crisp.config.autoaim.title": "自瞄",
+  "crisp.config.autoaim.enabled": "启用自瞄",
+  "crisp.config.autoaim.triggerMode": "触发方式",
+  "crisp.config.autoaim.triggerMode.HOLD": "按住",
+  "crisp.config.autoaim.triggerMode.TOGGLE": "切换",
+  "crisp.config.autoaim.searchRadius": "搜索半径",
+  "crisp.config.autoaim.obstacleCheck": "遮挡检测",
+  "crisp.config.autoaim.listMode": "过滤模式",
+  "crisp.config.autoaim.listMode.BLACKLIST": "黑名单",
+  "crisp.config.autoaim.listMode.WHITELIST": "白名单",
+  "crisp.config.autoaim.showHighlight": "目标高亮"
+}

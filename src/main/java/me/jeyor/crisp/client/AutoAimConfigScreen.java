@@ -1,6 +1,6 @@
-package me.jeyor.j3toolbox.client;
+package me.jeyor.crisp.client;
 
-import me.jeyor.j3toolbox.ClientConfig;
+import me.jeyor.crisp.ClientConfig;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.gui.components.Button;
 import net.minecraft.client.gui.components.CycleButton;
@@ -15,7 +15,7 @@ public class AutoAimConfigScreen extends Screen {
     private final Screen parent;
 
     public AutoAimConfigScreen(Screen parent) {
-        super(Component.translatable("j3toolbox.config.autoaim.title"));
+        super(Component.translatable("crisp.config.autoaim.title"));
         this.parent = parent;
     }
 
@@ -24,12 +24,12 @@ public class AutoAimConfigScreen extends Screen {
         int width = 240;
         int x = this.width / 2 - width / 2;
         int y = this.height / 8;
-        y = addOption(x, y, width, "j3toolbox.config.autoaim.enabled", ClientConfig.AUTOAIM_ENABLED);
+        y = addOption(x, y, width, "crisp.config.autoaim.enabled", ClientConfig.AUTOAIM_ENABLED);
         this.addRenderableWidget(CycleButton.builder((ClientConfig.TriggerMode mode) ->
-                        Component.translatable("j3toolbox.config.autoaim.triggerMode." + mode.name()))
+                        Component.translatable("crisp.config.autoaim.triggerMode." + mode.name()))
                 .withValues(ClientConfig.TriggerMode.values())
                 .withInitialValue(ClientConfig.AUTOAIM_TRIGGER_MODE.get())
-                .create(x, y, width, 20, Component.translatable("j3toolbox.config.autoaim.triggerMode"),
+                .create(x, y, width, 20, Component.translatable("crisp.config.autoaim.triggerMode"),
                         (button, value) -> {
                             ClientConfig.AUTOAIM_TRIGGER_MODE.set(value);
                             ClientConfig.SPEC.save();
@@ -42,24 +42,24 @@ public class AutoAimConfigScreen extends Screen {
         this.addRenderableWidget(CycleButton.builder((Double value) -> Component.literal(String.valueOf(value.intValue())))
                 .withValues(RADIUS_VALUES)
                 .withInitialValue(initialRadius)
-                .create(x, y, width, 20, Component.translatable("j3toolbox.config.autoaim.searchRadius"),
+                .create(x, y, width, 20, Component.translatable("crisp.config.autoaim.searchRadius"),
                         (button, value) -> {
                             ClientConfig.AUTOAIM_SEARCH_RADIUS.set(value);
                             ClientConfig.SPEC.save();
                         }));
         y += 24;
-        y = addOption(x, y, width, "j3toolbox.config.autoaim.obstacleCheck", ClientConfig.AUTOAIM_OBSTACLE_CHECK);
+        y = addOption(x, y, width, "crisp.config.autoaim.obstacleCheck", ClientConfig.AUTOAIM_OBSTACLE_CHECK);
         this.addRenderableWidget(CycleButton.builder((ClientConfig.ListMode mode) ->
-                        Component.translatable("j3toolbox.config.autoaim.listMode." + mode.name()))
+                        Component.translatable("crisp.config.autoaim.listMode." + mode.name()))
                 .withValues(ClientConfig.ListMode.values())
                 .withInitialValue(ClientConfig.AUTOAIM_LIST_MODE.get())
-                .create(x, y, width, 20, Component.translatable("j3toolbox.config.autoaim.listMode"),
+                .create(x, y, width, 20, Component.translatable("crisp.config.autoaim.listMode"),
                         (button, value) -> {
                             ClientConfig.AUTOAIM_LIST_MODE.set(value);
                             ClientConfig.SPEC.save();
                         }));
         y += 24;
-        y = addOption(x, y, width, "j3toolbox.config.autoaim.showHighlight", ClientConfig.AUTOAIM_SHOW_HIGHLIGHT);
+        y = addOption(x, y, width, "crisp.config.autoaim.showHighlight", ClientConfig.AUTOAIM_SHOW_HIGHLIGHT);
         this.addRenderableWidget(Button.builder(Component.translatable("gui.done"), button -> this.onClose())
                 .bounds(x, y + 12, width, 20)
                 .build());

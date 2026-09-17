@@ -1,9 +1,9 @@
 {
   "required": true,
   "minVersion": "0.8",
-  "package": "me.jeyor.j3toolbox.mixin",
+  "package": "me.jeyor.crisp.mixin",
   "compatibilityLevel": "JAVA_8",
-  "refmap": "j3toolbox.refmap.json",
+  "refmap": "crisp.refmap.json",
   "mixins": [
   ],
   "client": [

@@ -1,6 +1,6 @@
-package me.jeyor.j3toolbox.client;
+package me.jeyor.crisp.client;
 
-import me.jeyor.j3toolbox.ClientConfig;
+import me.jeyor.crisp.ClientConfig;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.gui.components.Button;
 import net.minecraft.client.gui.components.CycleButton;
@@ -9,11 +9,11 @@ import net.minecraft.network.chat.Component;
 import net.minecraftforge.common.ForgeConfigSpec;
 import net.minecraftforge.fml.ModList;
 
-public class J3toolboxConfigScreen extends Screen {
+public class CrispConfigScreen extends Screen {
     private final Screen parent;
 
-    public J3toolboxConfigScreen(Screen parent) {
-        super(Component.translatable("j3toolbox.config.title"));
+    public CrispConfigScreen(Screen parent) {
+        super(Component.translatable("crisp.config.title"));
         this.parent = parent;
     }
 
@@ -22,14 +22,14 @@ public class J3toolboxConfigScreen extends Screen {
         int width = 240;
         int x = this.width / 2 - width / 2;
         int y = this.height / 8;
-        y = addOption(x, y, width, "j3toolbox.config.removeBreakDelay", ClientConfig.REMOVE_BREAK_DELAY);
-        y = addOption(x, y, width, "j3toolbox.config.removeJumpDelay", ClientConfig.REMOVE_JUMP_DELAY);
+        y = addOption(x, y, width, "crisp.config.removeBreakDelay", ClientConfig.REMOVE_BREAK_DELAY);
+        y = addOption(x, y, width, "crisp.config.removeJumpDelay", ClientConfig.REMOVE_JUMP_DELAY);
         if (ModList.get().isLoaded("tacz")) {
-            y = addOption(x, y, width, "j3toolbox.config.tacz.removeRecoil", ClientConfig.TACZ_REMOVE_RECOIL);
-            y = addOption(x, y, width, "j3toolbox.config.tacz.autoReload", ClientConfig.TACZ_AUTO_RELOAD);
-            y = addOption(x, y, width, "j3toolbox.config.tacz.semiAsAuto", ClientConfig.TACZ_SEMI_AS_AUTO);
+            y = addOption(x, y, width, "crisp.config.tacz.removeRecoil", ClientConfig.TACZ_REMOVE_RECOIL);
+            y = addOption(x, y, width, "crisp.config.tacz.autoReload", ClientConfig.TACZ_AUTO_RELOAD);
+            y = addOption(x, y, width, "crisp.config.tacz.semiAsAuto", ClientConfig.TACZ_SEMI_AS_AUTO);
         }
-        this.addRenderableWidget(Button.builder(Component.translatable("j3toolbox.config.autoaim.title"),
+        this.addRenderableWidget(Button.builder(Component.translatable("crisp.config.autoaim.title"),
                         button -> this.minecraft.setScreen(new AutoAimConfigScreen(this)))
                 .bounds(x, y, width, 20)
                 .build());

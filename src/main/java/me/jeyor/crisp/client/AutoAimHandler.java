@@ -1,8 +1,8 @@
-package me.jeyor.j3toolbox.client;
+package me.jeyor.crisp.client;
 
 import com.mojang.blaze3d.systems.RenderSystem;
 import com.mojang.blaze3d.vertex.PoseStack;
-import me.jeyor.j3toolbox.ClientConfig;
+import me.jeyor.crisp.ClientConfig;
 import net.minecraft.client.KeyMapping;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.player.LocalPlayer;
@@ -32,9 +32,9 @@ import java.util.Optional;
 
 public final class AutoAimHandler {
     public static final KeyMapping AIM_KEY = new KeyMapping(
-            "key.j3toolbox.autoaim",
+            "key.crisp.autoaim",
             GLFW.GLFW_KEY_X,
-            "key.categories.j3toolbox"
+            "key.categories.crisp"
     );
 
     private static boolean toggleState;

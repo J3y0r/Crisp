@@ -1,4 +1,4 @@
-package me.jeyor.j3toolbox;
+package me.jeyor.crisp;
 
 import net.minecraftforge.common.ForgeConfigSpec;
 

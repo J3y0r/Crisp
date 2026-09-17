@@ -1,6 +1,6 @@
-package me.jeyor.j3toolbox;
+package me.jeyor.crisp;
 
-import me.jeyor.j3toolbox.client.ClientSetup;
+import me.jeyor.crisp.client.ClientSetup;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.fml.IExtensionPoint;
 import net.minecraftforge.fml.ModLoadingContext;
@@ -9,11 +9,11 @@ import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.loading.FMLEnvironment;
 import net.minecraftforge.network.NetworkConstants;
 
-@Mod(J3toolbox.MODID)
-public class J3toolbox {
-    public static final String MODID = "j3toolbox";
+@Mod(Crisp.MODID)
+public class Crisp {
+    public static final String MODID = "crisp";
 
-    public J3toolbox() {
+    public Crisp() {
         ModLoadingContext context = ModLoadingContext.get();
         context.registerConfig(ModConfig.Type.CLIENT, ClientConfig.SPEC);
         context.registerExtensionPoint(
